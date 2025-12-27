@@ -1,4 +1,4 @@
-import Collections from "./components/layout/Collections";
+import Editorial from "./components/layout/Editorial";
 import HeaderContent from "./components/layout/HeaderContent";
 import HeroContent from "./components/layout/HeroContent";
 import Decorations from "./components/ui/Decorations";
@@ -19,7 +19,7 @@ const App = () => {
 
         {/* Collections Page */}
         <div className="mt-40 xl:mt-30">
-          <Collections />
+          <Editorial />
         </div>
       </main>
     </BrowserRouter>

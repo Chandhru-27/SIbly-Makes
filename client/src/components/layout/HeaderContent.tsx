@@ -5,7 +5,7 @@ const HeaderContent = () => {
 
   return (
     <header className="w-full flex">
-      <nav className="text-white opacity-70 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] py-8 flex lg:gap-16 2xl:gap-35 lg:justify-normal w-full justify-between items-center">
+      <nav className="text-white opacity-70 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] py-8 flex lg:gap-16 2xl:gap-35  w-full lg:justify-normal justify-between items-center">
         <Link
           to="/"
           className="biz-udmincho-regular text-[clamp(1.3375rem,0.5284rem+1.8182vw,3.4375rem)] cursor-pointer"
@@ -17,15 +17,15 @@ const HeaderContent = () => {
         <div className="lg:space-x-15 2xl:space-x-35 text-[clamp(0.625rem,0.4716rem+0.6818vw,1.5625rem)] poppins-regular pt-2 2xl:pt-4">
             <>
               <button className="lg:hidden">
-                <Menu color="#cacaca" size={22} />
+                <Menu color="#ffffff" size={22} strokeWidth={3}/>
               </button>
             </>
             <>
-              <Link to="#" className="cursor-pointer hidden lg:inline">
-               <span className="tracking-[4px]">Collections</span> ❋
+              <Link to="#" className="cursor-pointer hidden lg:inline poiret-one-regular">
+               <span className="tracking-[2px]">Collections</span> ❋
               </Link>
-              <Link to="#" className="cursor-pointer hidden lg:inline">
-                <span className="tracking-[4px]">Contact us</span> ❋
+              <Link to="#" className="cursor-pointer hidden lg:inline poiret-one-regular">
+                <span className="tracking-[2px]">Contact us</span> ❋
               </Link>
             </>
         </div>

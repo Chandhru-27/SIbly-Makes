@@ -5,10 +5,10 @@ const HeroContent = React.memo(() => {
     <section className="relative z-10 grid xl:pt-2 xl:px-6">
       <div className="w-full grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] items-center">
         {/* Hero start Text */}
-        <div className="flex flex-col items-center h-full justify-between order-1 xl:order-0">
-          <p className="poiret-one-regular flex flex-col max-xl:items-center text-white opacity-[0.79] text-[clamp(3.5rem,1.3239rem+5.2273vw,9.6875rem)]">
-            <span className="glow-image">DISCOVER</span>
-            <span className="glow-text flex">
+        <div className="flex flex-col items-center h-full justify-center gap-10 order-1 xl:order-0">
+          <p className="biz-udmincho-regular leading-[clamp(3.75rem,2.9318rem+3.6364vw,8.75rem)] text-center flex flex-col text-white opacity-[0.8] text-[clamp(3.5rem,1.3239rem+5.2273vw,9.6875rem)]">
+            <span className="xl:text-left">DISCOVER</span>
+            <span className="flex tracking-tighter gap-2 poppins-bold text-[#7599C4]">
               THE ART
               {/* Bow Image */}
               <img
@@ -17,14 +17,14 @@ const HeroContent = React.memo(() => {
                 className="w-[clamp(1.5rem,1.2692rem+1.0256vw,2.5rem)] h-[clamp(2rem,1.7115rem+1.2821vw,3.25rem)]"
               />
             </span>
-            <span className="glow-text">OF CRAFT.</span>
+            <span className="">OF CRAFT</span>
           </p>
 
           <div className="flex flex-col xl:flex-row max-xl:items-center xl:gap-10">
-            <p className="text-[#d6d1d1] text-[clamp(1rem,-0.6875rem+1.4063vw,1.5625rem)] flex flex-col justify-center tracking-wide items-center poiret-one-regular">
+            <p className="text-white text-[clamp(1rem,-0.6875rem+1.4063vw,1.5625rem)] flex flex-col justify-center tracking-wide items-center poiret-one-regular">
               Crafted with
               <span className="flex gap-6">
-                <span> — Love </span> ✿ <span> Passion </span> ✿{" "}
+                <span> — Love </span> ✿ <span className="text-[#70b0ff]"> Passion </span> ✿{" "}
                 <span> Care —</span>
               </span>
             </p>
@@ -75,9 +75,9 @@ const HeroContent = React.memo(() => {
             </div>
 
             <div className="flex justify-center ml-4 xl:ml-0">
-              <p className="text-[#b4b0b0] poppins-regular tracking-[8px] text-center text-[clamp(1.2875rem,0.2886rem+1.7727vw,2.925rem)] flex flex-col">
+              <p className="text-white opacity-[0.8] poppins-bold tracking-[4px] text-center text-[clamp(1.2875rem,0.2886rem+1.7727vw,2.925rem)] flex flex-col">
                 <span>Handcrafted</span>
-                <span>crochet</span>
+                <span className="text-[#7599C4]">crochet</span>
                 <span>collections</span>
               </p>
             </div>

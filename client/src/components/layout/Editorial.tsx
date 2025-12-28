@@ -7,7 +7,7 @@ const Editorial = () => {
 
     gsap.set(items, {
       opacity: 0,
-      y: 80,
+      y: () => window.innerHeight * 0.6,
     });
 
     gsap.set(items[0], {
@@ -122,10 +122,10 @@ const Editorial = () => {
                   className="absolute flex justify-center inset-0"
                 >
                   <div className="flex flex-col gap-5 justify-center">
-                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,1.3333rem+1.0417vw,3rem)]">
+                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       HANDWRITTEN, NEVER GENERATED ✍🏻
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.9167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
                       Every letter we create is written by hand using
                       traditional calligraphy techniques — no fonts, no
                       shortcuts. Each piece carries the warmth, imperfections,
@@ -139,10 +139,10 @@ const Editorial = () => {
                   className="absolute flex justify-center inset-0"
                 >
                   <div className="flex flex-col gap-5 justify-center">
-                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,1.3333rem+1.0417vw,3rem)]">
+                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       CRAFTED WITH CARE 🪡
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.9167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
                       From delicate crochet details to fully custom designs,
                       every creation is made patiently, one loop at a time. We
                       believe true craftsmanship takes time, intention, and care
@@ -156,10 +156,10 @@ const Editorial = () => {
                   className="absolute flex justify-center inset-0"
                 >
                   <div className="flex flex-col gap-5 justify-center">
-                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,1.3333rem+1.0417vw,3rem)]">
+                    <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       END TO END SUPPORT 🫱🏻‍🫲🏻
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.9167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
                       Your ideas guide the process. We work closely with you to
                       customise each piece to your vision, provide clear
                       communication throughout, and ensure safe, hassle-free

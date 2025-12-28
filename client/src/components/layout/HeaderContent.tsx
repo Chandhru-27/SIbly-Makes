@@ -44,7 +44,7 @@ const HeaderContent = () => {
             <img
               src="/assets/logo.webp"
               data-logo-source
-              className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] logo h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] z-[99999] mt-1"
+              className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] logo h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] mt-1"
             />
           </div>
           <span className="leading-tight">

@@ -16,6 +16,12 @@ body {
 
 body {
   background-color: #0e081d;
+  position: relative;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+  box-shadow: inset 0 0 160px 60px rgba(22, 41, 51, 0.35),
+  inset 0 0 0 1px rgba(255, 255, 255, 0.03);
 }
 
 .hero-circle {
@@ -47,7 +53,7 @@ body {
   transition: filter 0.3s ease;
 }
 
-@layer base {
+/* @layer base {
   body::before {
     content: "";
     position: fixed;
@@ -57,7 +63,7 @@ body {
     box-shadow: inset 0 0 160px 60px rgba(22, 41, 51, 0.35),
       inset 0 0 0 1px rgba(255, 255, 255, 0.03);
   }
-}
+} */
 
 /* Imported fonts */
 .biz-udmincho-regular {

@@ -2,8 +2,6 @@ import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";
 
 const Editorial = () => {
-  
-
   useGSAP(() => {
     const items = gsap.utils.toArray("[data-why-item]") as Element[];
 
@@ -53,9 +51,7 @@ const Editorial = () => {
   }, []);
 
   return (
-    <section
-      className="min-h-screen relative text-white w-full z-99 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]"
-    >
+    <section className="min-h-screen relative text-white w-full z-99 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]">
       <div className="flex flex-col items-center gap-[clamp(2.5rem,1.6818rem+3.6364vw,7.5rem)]">
         {/* Logo Holder */}
         <div className="pt-4 flex flex-col items-center justify-center gap-4">
@@ -91,8 +87,8 @@ const Editorial = () => {
               ONE LOOP AT A TIME
             </span>
             . HONOURING THE ART OF
-            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
-              CROCHET.
+            <span className="ml-2 biz-udmincho-regular tracking-tighter text-[#7599C4]">
+             CROCHET & CALLIGRAPHY.
             </span>
           </p>
         </div>
@@ -161,7 +157,7 @@ const Editorial = () => {
                 >
                   <div className="flex flex-col gap-5 justify-center">
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,1.3333rem+1.0417vw,3rem)]">
-                      MADE FOR YOU, SUPPORTED BY US 🫱🏻‍🫲🏻
+                      END TO END SUPPORT 🫱🏻‍🫲🏻
                     </p>
                     <p className="biz-udmincho-regular text-[clamp(1.5rem,0.9167rem+0.9115vw,2.375rem)] tracking-tight">
                       Your ideas guide the process. We work closely with you to
@@ -182,7 +178,9 @@ const Editorial = () => {
           <div className="flex gap-3 w-full">
             <div className="w-0.5 bg-[#7599C4]"></div>
             <div className="flex flex-col leading-none tracking-tighter poppins-bold text-[54px] md:text-7xl">
-              <span>WHY <span className="text-[#7599C4]">SIBLY</span></span>
+              <span>
+                WHY <span className="text-[#7599C4]">SIBLY</span>
+              </span>
               <span>MAKES ?</span>
             </div>
           </div>
@@ -217,7 +215,7 @@ const Editorial = () => {
             <div className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
-                  MADE FOR YOU, SUPPORTED BY US 🫱🏻‍🫲🏻
+                  END TO END SUPPORT 🫱🏻‍🫲🏻
                 </p>
                 <p className="biz-udmincho-regular text-[18px] tracking-tight">
                   Your ideas guide the process. We work closely with you to
@@ -229,7 +227,7 @@ const Editorial = () => {
               </div>
             </div>
           </div>
-      </div>
+        </div>
       </div>
     </section>
   );

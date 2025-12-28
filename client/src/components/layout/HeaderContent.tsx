@@ -17,11 +17,14 @@ const HeaderContent = () => {
       tl.from(".nav-elements > *", {
         x: -120,
         opacity: 0,
-        stagger: 0.15
-      }).from(".hambutton",{
-        x: 120,
-        opacity: 0,
-      }, "-=0.8")
+      }).from(
+        ".hambutton",
+        {
+          x: 120,
+          opacity: 0,
+        },
+        "-=0.8"
+      );
     },
     { scope: navRef }
   );
@@ -30,17 +33,20 @@ const HeaderContent = () => {
     <header className="w-full flex">
       <nav
         ref={navRef}
-        className="text-white opacity-70 nav-elements px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] py-8 flex lg:gap-16 2xl:gap-35  w-full lg:justify-normal justify-between items-center"
+        className="text-white opacity-70 nav-elements px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] py-8 flex gap-20 w-full lg:justify-normal justify-between items-center"
       >
         <Link
           to="/"
+          
           className="biz-udmincho-regular nav-elements text-[clamp(1.3375rem,0.5284rem+1.8182vw,3.4375rem)] flex xl:gap-10 gap-6  items-center cursor-pointer"
         >
-          <img
-            src="/assets/logo.webp"
-            data-logo-source
-            className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] logo h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)]"
-          />
+          <div data-logo-residence>
+            <img
+              src="/assets/logo.webp"
+              data-logo-source
+              className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] logo h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] z-[99999] mt-1"
+            />
+          </div>
           <span className="leading-tight">
             <span className="tracking-wide glow-text">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>

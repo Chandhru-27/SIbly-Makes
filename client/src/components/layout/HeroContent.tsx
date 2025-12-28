@@ -29,7 +29,7 @@ const HeroContent = React.memo(() => {
   
 
   return (
-    <section className="relative z-10 grid xl:pt-2 xl:px-6" ref={heroRef}>
+    <section className="hero relative z-10 grid xl:pt-2 xl:px-6" ref={heroRef}>
       <div className="w-full grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] items-center">
         {/* Hero start Text */}
         <div className="hero-left flex flex-col items-center h-full justify-center gap-10 order-1 xl:order-0">

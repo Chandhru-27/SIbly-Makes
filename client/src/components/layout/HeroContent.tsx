@@ -1,11 +1,38 @@
-import React from "react";
+import React, { useRef } from "react";
+import { gsap } from "../../lib/gsap";
+import { useGSAP } from "@gsap/react";
 
 const HeroContent = React.memo(() => {
+  const heroRef = useRef(null);
+
+  useGSAP(() => {
+    const tl = gsap.timeline({
+      defaults: {
+        duration: 1.2,
+        ease: "power3.out",
+      },
+    });
+    tl.from(".hero-left > *", {
+      x: -120,
+      opacity: 0,
+      stagger: 0.15,
+    }).from(".hero-middle > *", {
+      y: 120,
+      opacity: 0,
+      stagger: 0.15,
+    }, "-=0.8").from(".hero-right", {
+      x: 120,
+      opacity: 0,
+    }, "-=0.8")
+  }, {scope: heroRef});
+
+  
+
   return (
-    <section className="relative z-10 grid xl:pt-2 xl:px-6">
+    <section className="relative z-10 grid xl:pt-2 xl:px-6" ref={heroRef}>
       <div className="w-full grid grid-cols-1 xl:grid-cols-[1fr_auto_1fr] items-center">
         {/* Hero start Text */}
-        <div className="flex flex-col items-center h-full justify-center gap-10 order-1 xl:order-0">
+        <div className="hero-left flex flex-col items-center h-full justify-center gap-10 order-1 xl:order-0">
           <p className="biz-udmincho-regular leading-[clamp(3.75rem,2.9318rem+3.6364vw,8.75rem)] text-center flex flex-col text-white opacity-[0.8] text-[clamp(3.5rem,1.3239rem+5.2273vw,9.6875rem)]">
             <span className="xl:text-left">DISCOVER</span>
             <span className="flex tracking-tighter gap-2 poppins-bold text-[#7599C4]">
@@ -24,7 +51,8 @@ const HeroContent = React.memo(() => {
             <p className="text-white text-[clamp(1rem,-0.6875rem+1.4063vw,1.5625rem)] flex flex-col justify-center tracking-wide items-center poiret-one-regular">
               Crafted with
               <span className="flex gap-6">
-                <span> — Love </span> ✿ <span className="text-[#70b0ff]"> Passion </span> ✿{" "}
+                <span> — Love </span> ✿{" "}
+                <span className="text-[#70b0ff]"> Passion </span> ✿{" "}
                 <span> Care —</span>
               </span>
             </p>
@@ -41,7 +69,7 @@ const HeroContent = React.memo(() => {
         </div>
 
         {/* Center images */}
-        <div className="w-full order-2 xl:order-0 flex flex-col relative gap-0 xl:gap-15 justify-self-center items-center">
+        <div className="hero-middle w-full order-2 xl:order-0 flex flex-col relative gap-0 xl:gap-15 justify-self-center items-center">
           {/* Yarn ball */}
           <div className="flex xl:justify-start justify-end w-full px-10 md:px-40 xl:px-0">
             <img
@@ -67,7 +95,7 @@ const HeroContent = React.memo(() => {
         </div>
 
         {/* Hero end text */}
-        <div className="order-3 xl:order-0 flex-1 xl:justify-self-end max-xs:mt-2 h-full flex flex-col xl:h-full justify-center w-full relative">
+        <div className="hero-right order-3 xl:order-0 flex-1 xl:justify-self-end max-xs:mt-2 h-full flex flex-col xl:h-full justify-center w-full relative">
           <div className="flex-1 relative flex flex-col xl:items-center xl:gap-4 gap-10 justify-center">
             {/* Circular div */}
             <div className="absolute inset-0 flex justify-center items-center">

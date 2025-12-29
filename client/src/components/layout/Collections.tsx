@@ -29,7 +29,6 @@ const Collections = () => {
         scrub: true,
         pin: pin,
         anticipatePin: 1,
-        snap: 1 / (panels.length - 1),
       },
     });
   }, []);
@@ -37,45 +36,126 @@ const Collections = () => {
   return (
     <section className="relative">
       {/* Title */}
-      <div className="flex gap-2 w-full px-15 mt-6 h-fit">
+      <div className="flex gap-2 w-full px-[clamp(1.5rem,0.5182rem+4.3636vw,7.5rem)] mt-6 h-fit">
         <div className="w-0.5 bg-[#7599C4]"></div>
-        <p className="text-white poppins-bold text-[60px] leading-none">
+        <p className="text-white poppins-bold text-[clamp(2.5rem,1.8864rem+2.7273vw,6.25rem)] leading-none">
           Collections
         </p>
       </div>
 
-      {/* Horizontal Scroll */}
-      <div data-label-horizontalSection className="">
-        <div
-          data-label-horizontalPin
-          className="min-h-screen overflow-hidden flex"
-        >
+      {/* Horizontal Scroll Desktop */}
+      <div data-label-horizontalSection className="lg:block hidden">
+        <div data-label-horizontalPin className="min-h- overflow-hidden flex">
           <div
             data-label-horizontalTrack
-            className="flex w-max gap-10 px-[30vw] pt-[15vh]"
+            className="flex w-max gap-10 px-[30vw] pt-[10vh]"
           >
-            <div data-label-panel className="w-[400px] h-[400px] bg-red-500" />
-            <div data-label-panel className="w-[400px] h-[400px] bg-blue-500" />
-            <div
-              data-label-panel
-              className="w-[400px] h-[400px] bg-green-500"
-            />
-            <div
-              data-label-panel
-              className="w-[400px] h-[400px] bg-yellow-500"
-            />
-            <div data-label-panel className="w-[400px] h-[400px] bg-red-500" />
-            <div data-label-panel className="w-[400px] h-[400px] bg-blue-500" />
-            <div
-              data-label-panel
-              className="w-[400px] h-[400px] bg-green-500"
-            />
-            <div
-              data-label-panel
-              className="w-[400px] h-[400px] bg-yellow-500"
-            />
+            <div data-label-panel className="glass-card">
+              {/* Image */}
+              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
+                <img
+                  src="/assets/collections/Keychains.webp"
+                  className="gorw h-full w-full"
+                />
+              </div>
+            </div>
+
+            <div data-label-panel className="glass-card">
+              {/* Image */}
+              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
+                <img
+                  src="/assets/collections/Keychains.webp"
+                  className="gorw h-full w-full"
+                />
+              </div>
+            </div>
+
+            <div data-label-panel className="glass-card">
+              {/* Image */}
+              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
+                <img
+                  src="/assets/collections/Keychains.webp"
+                  className="gorw h-full w-full"
+                />
+              </div>
+            </div>
+
+            <div data-label-panel className="glass-card">
+              {/* Image */}
+              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
+                <img
+                  src="/assets/collections/Keychains.webp"
+                  className="gorw h-full w-full"
+                />
+              </div>
+            </div>
           </div>
         </div>
+      </div>
+
+      {/* Horizontal Scroll Mobild */}
+      <div className="lg:hidden flex justify-center ">
+        <div className="flex flex-col justify-center w-max gap-40 pt-[10vh]">
+          <div className="glass-card-mobile">
+            <div className="w-[90%] h-[90%] flex justify-center my-4 relative overflow-hidden">
+              <img
+                src="/assets/collections/Keychains.webp"
+                className="gorw h-full w-full"
+              />
+            </div>
+          </div>
+
+          <div className="glass-card-mobile">
+            <div className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden">
+              <img
+                src="/assets/collections/Keychains.webp"
+                className="gorw h-full w-full"
+              />
+            </div>
+          </div>
+
+          <div className="glass-card-mobile">
+            <div className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden">
+              <img
+                src="/assets/collections/Keychains.webp"
+                className="gorw h-full w-full"
+              />
+            </div>
+          </div>
+
+          <div className="glass-card-mobile">
+            <div className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden">
+              <img
+                src="/assets/collections/Keychains.webp"
+                className="gorw h-full w-full"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* CTA section */}
+      <div className="flex justify-center lg:mt-60 mt-30">
+        <p className="text-[clamp(1.5625rem,0.5909rem+4.3182vw,7.5rem)] text-white text-center poppins-bold leading-none">
+          <p className="flex gap-2 justify-center">
+            <span className="biz-udmincho-regular text-[#7599C4] tracking-tighter">
+              DESIGNED
+            </span>{" "}
+            TO BE PERSONAL,<br></br>
+          </p>
+          <p className="flex gap-2 justify-center">
+            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
+              CRAFTED
+            </span>{" "}
+            TO BE YOURS. LET'S <br></br>
+          </p>
+          <p className="flex gap-2 justify-center">
+            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
+              CUSTOMIZE
+            </span>
+            <span>ONE JUST FOR YOU</span>
+          </p>
+        </p>
       </div>
     </section>
   );

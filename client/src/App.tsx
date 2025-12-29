@@ -6,6 +6,7 @@ import Decorations from "./components/ui/Decorations";
 import { BrowserRouter } from "react-router-dom";
 import LenisProvider from "./hooks/LenisProvider";
 import Collections from "./components/layout/Collections";
+import Contact from "./components/layout/Contact";
 
 const App = () => {
   return (
@@ -29,6 +30,10 @@ const App = () => {
 
           <div className="mt-20 xl:mt-20">
             <Collections/>
+          </div>
+
+          <div className="mt-20 xl:mt-60">
+            <Contact/>
           </div>
         </main>
       </BrowserRouter>

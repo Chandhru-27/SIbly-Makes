@@ -45,14 +45,14 @@ const Collections = () => {
 
       {/* Horizontal Scroll Desktop */}
       <div data-label-horizontalSection className="lg:block hidden">
-        <div data-label-horizontalPin className="min-h- overflow-hidden flex">
+        <div data-label-horizontalPin className="overflow-hidden flex">
           <div
             data-label-horizontalTrack
-            className="flex w-max gap-10 px-[30vw] pt-[10vh]"
+            className="flex w-max gap-10 pl-[30vw] pr-[10vw] pt-[10vh] relative"
           >
             <div data-label-panel className="glass-card">
               {/* Image */}
-              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
+              <div className="w-[90%] h-[90%] mt-5 overflow-hidden">
                 <img
                   src="/assets/collections/Keychains.webp"
                   className="gorw h-full w-full"
@@ -93,9 +93,12 @@ const Collections = () => {
         </div>
       </div>
 
-      {/* Horizontal Scroll Mobild */}
+      {/* Horizontal Scroll Desktop */}
+
+
+      {/* Horizontal Scroll Mobile */}
       <div className="lg:hidden flex justify-center ">
-        <div className="flex flex-col justify-center w-max gap-40 pt-[10vh]">
+        <div className="flex flex-col justify-center w-max gap-40 pt-[5vh]">
           <div className="glass-card-mobile">
             <div className="w-[90%] h-[90%] flex justify-center my-4 relative overflow-hidden">
               <img

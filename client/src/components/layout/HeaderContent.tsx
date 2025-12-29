@@ -33,7 +33,7 @@ const HeaderContent = () => {
     <header className="w-full flex">
       <nav
         ref={navRef}
-        className="text-white opacity-70 nav-elements px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] py-8 flex gap-20 w-full lg:justify-normal justify-between items-center"
+        className="text-white opacity-70 nav-elements px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] flex gap-20 w-full lg:justify-normal justify-between items-center"
       >
         <Link
           to="/"
@@ -50,14 +50,14 @@ const HeaderContent = () => {
           <span className="leading-tight">
             <span className="tracking-wide glow-text">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>
-            <img
+            {/* <img
               src="/assets/thread.webp"
               alt="thread"
               className="w-[clamp(7.5rem,4.0545rem+9.0909vw,20rem)] h-[clamp(0.75rem,0.4864rem+0.7273vw,1.75rem)]"
-            />
+            /> */}
           </span>
         </Link>
-        <div className="lg:space-x-15 2xl:space-x-35 text-[clamp(0.625rem,0.4716rem+0.6818vw,1.5625rem)] poppins-regular4">
+        <div className="lg:space-x-15 mt-2 2xl:space-x-35 text-[clamp(0.625rem,0.4716rem+0.6818vw,1.5625rem)] poppins-regular4">
           <>
             <button className="lg:hidden hambutton">
               <Menu color="#ffffff" size={22} strokeWidth={3} />

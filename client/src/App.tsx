@@ -17,7 +17,6 @@ const App = () => {
           <div className="relative">
             <Decorations />
             <div>
-              <HeaderContent />
               <HeroContent />
             </div>
           </div>

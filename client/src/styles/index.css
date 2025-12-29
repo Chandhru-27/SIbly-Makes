@@ -40,19 +40,13 @@ body {
 .glass-card {
   width: clamp(27.5rem, 17.1667rem + 13.0208vw, 40rem);
   height: clamp(30rem, 19.0667rem + 13.0208vw, 42.5rem);
-  /* background-color: #ffcb8391; */
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* border-radius: 15px; */
   flex: 1;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
-/* .glass-card img {
-  border: 2px solid #9d936e;
-  border-radius: 15px;
-} */
 
 .glass-card-caption {
   margin: 4px 0px 0px 0px;
@@ -63,11 +57,9 @@ body {
 .glass-card-mobile {
   width: 340px;
   height: 380px;
-  background-color: #ffcb8391;
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 10px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
@@ -83,11 +75,6 @@ body {
     width: 340px;
     height: 380px;
   }
-}
-
-.glass-card-mobile img {
-  border: 2px solid rgb(91, 91, 91);
-  border-radius: 10px;
 }
 
 .hero-circle {

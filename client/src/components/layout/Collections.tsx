@@ -93,9 +93,6 @@ const Collections = () => {
         </div>
       </div>
 
-      {/* Horizontal Scroll Desktop */}
-
-
       {/* Horizontal Scroll Mobile */}
       <div className="lg:hidden flex justify-center ">
         <div className="flex flex-col justify-center w-max gap-40 pt-[5vh]">
@@ -160,6 +157,9 @@ const Collections = () => {
           </p>
         </p>
       </div>
+
+      {/*  */}
+      <div></div>
     </section>
   );
 };

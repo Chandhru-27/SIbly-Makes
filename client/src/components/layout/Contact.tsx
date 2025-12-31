@@ -37,19 +37,19 @@ const Contact = () => {
           data-label-text
           className="flex flex-col order-1 xl:order-0 max-xl:px-2 h-full max-xl:gap-8 gap-10 w-full justify-center items-center"
         >
-          <p className="xl:w-1/2 leading-none tracking-lighter flex flex-col max-xl:items-center max-xl:gap-2 gap-4 text-white text-[clamp(1.3625rem,1.2398rem+4.3455vw,8.8125rem)]  poppins-bold">
-            <div className="flex xl:flex-col gap-2">
-              <span className="xl:w-full xl:text-left">LET'S</span>
-              <span className="xk:biz-udmincho-regular xl:w-full xl:pr-18 xl:text-center tracking-tight text-[#7599C4]">
-                GET IN
-              </span>
-              <span className="xl:w-full xl:text-end">TOUCH</span>
-            </div>
-            <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poiret-one-regular">
-              You’re just one step away from turning your idea into a custom
-              crochet piece or letter script.
+            <p className="xl:w-1/2 leading-none tracking-lighter flex flex-col max-xl:items-center max-xl:gap-2 gap-4 text-white text-[clamp(1.3625rem,1.2398rem+4.3455vw,8.8125rem)]  poppins-bold">
+              <div className="flex xl:flex-col gap-2">
+                <span className="xl:w-full xl:text-left">LET'S</span>
+                <span className="xk:biz-udmincho-regular xl:w-full xl:pr-18 xl:text-center tracking-tight text-[#7599C4]">
+                  GET IN
+                </span>
+                <span className="xl:w-full xl:text-end">TOUCH</span>
+              </div>
+              <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poiret-one-regular">
+                You’re just one step away from turning your idea into a custom
+                crochet piece or letter script.
+              </p>
             </p>
-          </p>
           <div className="flex items-center gap-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"

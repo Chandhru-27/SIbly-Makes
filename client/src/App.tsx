@@ -8,6 +8,7 @@ import Collections from "./components/layout/Collections";
 import Contact from "./components/layout/Contact";
 import Particles from "./components/Particles";
 import Footer from "./components/layout/Footer";
+import HeaderContent from "./components/layout/HeaderContent";
 
 const App = () => {
   const viewPortHeight = window.innerHeight;
@@ -29,22 +30,26 @@ const App = () => {
               disableRotation={false}
             />
           </div>
+          
           {/* Landing Page */}
-          <div className="relative">
+          <div className="relative min-h-screen flex flex-col gap-[5vh]">
             <Decorations />
+            <div className="flex flex-col  2xl:mt-15">
+              <HeaderContent />
+            </div>
             <div>
               <HeroContent />
             </div>
           </div>
 
           {/* Editorial Section */}
-          <div className="mt-40">
+          <div className="mt-40 max-w-640 mx-auto">
             <Editorial />
             {SharedLogoAnimator()}
           </div>
 
           {/* Collection Section */}
-          <div className="mt-20">
+          <div className="mt-20 max-w-640 mx-auto">
             <Collections />
           </div>
 
@@ -55,9 +60,8 @@ const App = () => {
 
           {/* Footer section */}
           <div className="mt-20">
-            <Footer/>
+            <Footer />
           </div>
-
         </main>
       </BrowserRouter>
     </LenisProvider>

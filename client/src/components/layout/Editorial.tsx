@@ -9,7 +9,7 @@ const Editorial = () => {
   const sectionRef = useRef<HTMLElement>(null);
 
   const viewPortWidth = window.innerWidth;
-  let startPercent: number = 120
+  let startPercent: number = 120;
 
   if (viewPortWidth <= 768) {
     startPercent = 100;
@@ -67,7 +67,6 @@ const Editorial = () => {
         start: "top top+=60%",
       },
     });
-
 
     const items = gsap.utils.toArray("[data-why-item]") as Element[];
     const mobileItems = gsap.utils.toArray<HTMLElement>(
@@ -166,22 +165,46 @@ const Editorial = () => {
           </p>
         </div>
 
-        {/* Editorial Section */}
-        <div ref={containerRef}>
-          <p className="text-[clamp(1.5625rem,0.5398rem+4.5455vw,7.8125rem)] text-center w-[clamp(20.625rem,7.125rem+60vw,103.125rem)]  poppins-bold leading-none">
-            <span className="biz-udmincho-regular text-[#7599C4] tracking-tighter">
-              HANDMADE
-            </span>{" "}
-            WITH PATIENCE AND CARE,
-            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
-              STITCHED
-            </span>{" "}
-            WITH INTENTION AND LOVE, CREATED{" "}
-            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
-              ONE LOOP AT A TIME
+        <div ref={containerRef} className="flex justify-center">
+          <p
+            className="
+              poppins-bold
+              text-center
+              leading-[0.95]
+              max-w-[90vw]
+              xl:max-w-300
+              2xl:max-w-350
+              mx-auto
+              text-[clamp(22px,4vw,100px)]
+            "
+          >
+            <span className="block">
+              <span className="biz-udmincho-regular text-[#7599C4] tracking-tighter">
+                HANDMADE
+              </span>{" "}
+              WITH PATIENCE,
             </span>
-            . HONOURING THE ART OF
-            <span className="ml-2 biz-udmincho-regular tracking-tighter text-[#7599C4]">
+
+            <span className="block">
+              AND CARE.
+              <span className="biz-udmincho-regular pl-1 tracking-tighter text-[#7599C4]">
+                STITCHED
+              </span>{" "}
+              WITH
+            </span>
+
+            <span className="block">INTENTION AND LOVE,</span>
+
+            <span className="block">
+              CREATED
+              <span className="biz-udmincho-regular pl-1 tracking-tighter text-[#7599C4]">
+                ONE LOOP AT A TIME.
+              </span>
+            </span>
+
+            <span className="block">HONOURING THE ART OF</span>
+
+            <span className="block biz-udmincho-regular tracking-tighter text-[#7599C4]">
               CROCHET & CALLIGRAPHY.
             </span>
           </p>
@@ -269,7 +292,7 @@ const Editorial = () => {
 
         {/* Why section Mobile */}
         <div data-why-start className="mt-30 space-y-20 block lg:hidden">
-          <div  data-why-item-mobile className="flex gap-3 w-full">
+          <div data-why-item-mobile className="flex gap-3 w-full">
             <div className="w-0.5 bg-[#7599C4]"></div>
             <div
               data-why-main

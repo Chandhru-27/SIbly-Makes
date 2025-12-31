@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";
-import HeaderContent from "./HeaderContent";
 
 const HeroContent = React.memo(() => {
   const heroRef = useRef(null);

@@ -50,11 +50,6 @@ const HeaderContent = () => {
           <span className="leading-tight">
             <span className="tracking-wide glow-text">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>
-            {/* <img
-              src="/assets/thread.webp"
-              alt="thread"
-              className="w-[clamp(7.5rem,4.0545rem+9.0909vw,20rem)] h-[clamp(0.75rem,0.4864rem+0.7273vw,1.75rem)]"
-            /> */}
           </span>
         </Link>
         <div className="lg:space-x-15 mt-2 2xl:space-x-35 text-[clamp(0.625rem,0.4716rem+0.6818vw,1.5625rem)] poppins-regular4">

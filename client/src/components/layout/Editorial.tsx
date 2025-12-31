@@ -175,7 +175,7 @@ const Editorial = () => {
               xl:max-w-300
               2xl:max-w-350
               mx-auto
-              text-[clamp(22px,4vw,100px)]
+              text-[clamp(1.375rem,0.5773rem+3.5455vw,6.25rem)]
             "
           >
             <span className="block">

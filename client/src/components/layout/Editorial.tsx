@@ -1,9 +1,100 @@
 import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
+import SplitType from "split-type";
 
 const Editorial = () => {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const sectionRef = useRef<HTMLElement>(null);
+
+  const viewPortWidth = window.innerWidth;
+  let startPercent: number = 120
+
+  if (viewPortWidth <= 768) {
+    startPercent = 100;
+  }
+
   useGSAP(() => {
+    const paragraph = containerRef.current?.querySelector("p");
+
+    if (paragraph) {
+      const text = new SplitType(paragraph, {
+        types: "lines",
+        tagName: "span",
+        lineClass: "line-reveal-container",
+      });
+
+      gsap.from(containerRef.current, {
+        x: -140,
+        opacity: 0,
+        stagger: 0.15,
+        delay: 0.25,
+        ease: "power3.out",
+        scrollTrigger: {
+          trigger: containerRef.current,
+          start: "top 95%",
+        },
+      });
+
+      gsap.fromTo(
+        text.lines,
+        {
+          "--reveal": 1,
+        },
+        {
+          "--reveal": 0,
+          duration: 0.6,
+          stagger: 0.18,
+          delay: 0.6,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: containerRef.current,
+            start: `top ${startPercent}%`,
+          },
+        }
+      );
+    }
+
+    gsap.from("[data-why-main]", {
+      x: -30,
+      opacity: 0,
+      stagger: 0.15,
+      delay: 0.3,
+      ease: "power1.out",
+      scrollTrigger: {
+        trigger: "[data-why-start]",
+        start: "top top+=60%",
+      },
+    });
+
+
     const items = gsap.utils.toArray("[data-why-item]") as Element[];
+    const mobileItems = gsap.utils.toArray<HTMLElement>(
+      "[data-why-item-mobile]"
+    );
+
+    mobileItems.forEach((item) => {
+      gsap.fromTo(
+        item,
+        {
+          opacity: 0,
+          y: 60,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 1,
+          delay: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: item,
+            start: "top 85%",
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
 
     gsap.set(items, {
       opacity: 0,
@@ -51,7 +142,10 @@ const Editorial = () => {
   }, []);
 
   return (
-    <section className="min-h-screen relative text-white w-full z-99 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]">
+    <section
+      ref={sectionRef}
+      className="min-h-screen relative text-white w-full z-99 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]"
+    >
       <div className="flex flex-col items-center gap-[clamp(2.5rem,1.6818rem+3.6364vw,7.5rem)]">
         {/* Logo Holder */}
         <div className="pt-4 flex flex-col items-center justify-center gap-4">
@@ -73,7 +167,7 @@ const Editorial = () => {
         </div>
 
         {/* Editorial Section */}
-        <div className="">
+        <div ref={containerRef}>
           <p className="text-[clamp(1.5625rem,0.5398rem+4.5455vw,7.8125rem)] text-center w-[clamp(20.625rem,7.125rem+60vw,103.125rem)]  poppins-bold leading-none">
             <span className="biz-udmincho-regular text-[#7599C4] tracking-tighter">
               HANDMADE
@@ -88,19 +182,19 @@ const Editorial = () => {
             </span>
             . HONOURING THE ART OF
             <span className="ml-2 biz-udmincho-regular tracking-tighter text-[#7599C4]">
-             CROCHET & CALLIGRAPHY.
+              CROCHET & CALLIGRAPHY.
             </span>
           </p>
         </div>
 
         {/* Why Section Desktop */}
-        <div className="relative w-full hidden lg:block">
+        <div data-why-start className="relative w-full hidden lg:block">
           <div
             data-why-section
             className=" flex flex-col justify-center lg:items-center lg:flex-row lg:gap-30"
           >
             <div data-why-left className="lg:w-2/4 w-full">
-              <div className="flex gap-4 justify-center w-full">
+              <div data-why-main className="flex gap-4 justify-center w-full">
                 <div className="w-0.5 bg-[#7599C4]"></div>
                 <div className="flex flex-col leading-none tracking-tighter poppins-bold text-[clamp(2.8125rem,1.0227rem+7.9545vw,13.75rem)]">
                   <span>WHY</span>
@@ -174,10 +268,13 @@ const Editorial = () => {
         </div>
 
         {/* Why section Mobile */}
-        <div className="mt-30 space-y-20 block lg:hidden">
-          <div className="flex gap-3 w-full">
+        <div data-why-start className="mt-30 space-y-20 block lg:hidden">
+          <div  data-why-item-mobile className="flex gap-3 w-full">
             <div className="w-0.5 bg-[#7599C4]"></div>
-            <div className="flex flex-col leading-none tracking-tighter poppins-bold text-[54px] md:text-7xl">
+            <div
+              data-why-main
+              className="flex flex-col leading-none tracking-tighter poppins-bold text-[54px] md:text-7xl"
+            >
               <span>
                 WHY <span className="text-[#7599C4]">SIBLY</span>
               </span>
@@ -186,7 +283,7 @@ const Editorial = () => {
           </div>
 
           <div className="h-full overflow-hidden space-y-20">
-            <div className=" flex justify-center">
+            <div data-why-item-mobile className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   HANDWRITTEN, NEVER GENERATED ✍🏻
@@ -199,7 +296,7 @@ const Editorial = () => {
                 </p>
               </div>
             </div>
-            <div className=" flex justify-center">
+            <div data-why-item-mobile className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   CRAFTED WITH CARE 🪡
@@ -212,7 +309,7 @@ const Editorial = () => {
                 </p>
               </div>
             </div>
-            <div className=" flex justify-center">
+            <div data-why-item-mobile className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   END TO END SUPPORT 🫱🏻‍🫲🏻

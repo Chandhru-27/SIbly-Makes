@@ -41,46 +41,44 @@ const HeroContent = React.memo(() => {
   );
 
   return (
-    <section className="flex flex-col min-h-screen justify-center xl:gap-[10vh]">
-      <div className="flex flex-col">
-        <HeaderContent />
-      </div>
-
-      <div className="hero relative z-10 grid xl:pt-2  xl:px-6" ref={heroRef}>
+    <section className="flex flex-col justify-center">
+      <div className="hero relative z-10 grid xl:pt-2 xl:px-6 " ref={heroRef}>
         <div className="w-full grid grid-cols-1 content-center xl:grid-cols-[1fr_auto_1fr]">
           {/* Hero start Text */}
-          <div className="hero-left flex flex-col items-center h-full pt-[10vh] gap-10 order-1 xl:order-0">
-            <p className="biz-udmincho-regular leading-[clamp(3.75rem,2.9318rem+3.6364vw,8.75rem)] text-center flex flex-col text-white opacity-[0.8] text-[clamp(3.5rem,1.3239rem+5.2273vw,9.6875rem)]">
-              <span className="xl:text-left">DISCOVER</span>
-              <span className="flex tracking-tighter gap-2 poppins-bold text-[#7599C4]">
-                THE ART
-                {/* Bow Image */}
-                <img
-                  src="/assets/bow.webp"
-                  alt="bow"
-                  className="w-[clamp(1.5rem,1.2692rem+1.0256vw,2.5rem)] h-[clamp(2rem,1.7115rem+1.2821vw,3.25rem)]"
-                />
-              </span>
-              <span className="">OF CRAFT</span>
-            </p>
-
-            <div className="flex flex-col xl:flex-row max-xl:items-center xl:gap-10">
-              <p className="text-white text-[clamp(1rem,-0.6875rem+1.4063vw,1.5625rem)] flex flex-col justify-center tracking-wide items-center poiret-one-regular">
-                Crafted with
-                <span className="flex gap-6">
-                  <span> — Love </span> ✿{" "}
-                  <span className="text-[#70b0ff]"> Passion </span> ✿{" "}
-                  <span> Care —</span>
+          <div className="hero-left flex flex-col items-center h-full justify-center order-1 xl:order-0">
+            <div className="flex flex-col items-center justify-between h-full">
+              <p className="biz-udmincho-regular leading-[clamp(3.75rem,2.9318rem+3.6364vw,8.75rem)] text-center pt-[10vh] flex flex-col text-white opacity-[0.8] text-[clamp(3.5rem,1.3239rem+5.2273vw,9.6875rem)]">
+                <span className="xl:text-left">DISCOVER</span>
+                <span className="flex tracking-tighter gap-2 poppins-bold text-[#7599C4]">
+                  THE ART
+                  {/* Bow Image */}
+                  <img
+                    src="/assets/bow.webp"
+                    alt="bow"
+                    className="w-[clamp(1.5rem,1.2692rem+1.0256vw,2.5rem)] h-[clamp(2rem,1.7115rem+1.2821vw,3.25rem)]"
+                  />
                 </span>
+                <span className="">OF CRAFT</span>
               </p>
 
-              {/* Hook Image */}
-              <div className="flex">
-                <img
-                  src="/assets/hook.webp"
-                  alt="crochet-hook"
-                  className="opacity-[0.5] w-15 h-15 rotate-325"
-                />
+              <div className="flex flex-col xl:flex-row max-xl:items-center xl:gap-10">
+                <p className="text-white text-[clamp(1rem,-0.6875rem+1.4063vw,1.5625rem)] flex flex-col justify-center tracking-wide items-center poiret-one-regular">
+                  Crafted with
+                  <span className="flex gap-6">
+                    <span> — Love </span> ✿{" "}
+                    <span className="text-[#70b0ff]"> Passion </span> ✿{" "}
+                    <span> Care —</span>
+                  </span>
+                </p>
+
+                {/* Hook Image */}
+                <div className="flex">
+                  <img
+                    src="/assets/hook.webp"
+                    alt="crochet-hook"
+                    className="opacity-[0.5] w-15 h-15 rotate-325"
+                  />
+                </div>
               </div>
             </div>
           </div>

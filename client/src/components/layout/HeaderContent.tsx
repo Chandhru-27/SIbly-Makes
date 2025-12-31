@@ -37,7 +37,6 @@ const HeaderContent = () => {
       >
         <Link
           to="/"
-          
           className="biz-udmincho-regular nav-elements text-[clamp(1.3375rem,0.5284rem+1.8182vw,3.4375rem)] flex xl:gap-10 gap-6  items-center cursor-pointer"
         >
           <div data-logo-residence>

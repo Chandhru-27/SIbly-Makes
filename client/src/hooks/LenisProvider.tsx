@@ -24,15 +24,16 @@ export default function LenisProivderProps({ children }: LenisProivderProps) {
     };
   }, []);
 
-  const isMobile = typeof window !== "undefined" && window.innerWidth < 768;
+  const isMobile =
+    typeof window !== "undefined" &&
+    window.matchMedia("(pointer: coarse)").matches;
 
   const lenisOptions = {
-    lerp: 0.1,
-    duration: 1.5,
-    smoothTouch: isMobile ? false : true, 
-    touchMultiplier: isMobile ? 2 : 1,
+    lerp: isMobile ? 1 : 0.1, // disable smoothing on mobile
+    duration: isMobile ? 0 : 1.2,
+    smoothTouch: false, // ALWAYS false (important)
+    touchMultiplier: 1, // keep native feel
   };
-
   return (
     <ReactLenis root ref={lenisRef} autoRaf={false} options={lenisOptions}>
       {children}

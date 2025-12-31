@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="relative grid xl:grid-cols-2 my-50 min-h-screen xl:content-center">
+      <section className="relative grid xl:grid-cols-2 my-50 lg:py-[10vh] min-h-screen xl:content-center">
         <div
           data-label-text
           className="flex flex-col order-1 xl:order-0 max-xl:px-2 h-full max-xl:gap-8 gap-10 w-full justify-center items-center"

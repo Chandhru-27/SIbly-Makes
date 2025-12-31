@@ -47,6 +47,26 @@ body {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 }
 
+.line-reveal-container {
+  position: relative;
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.line-reveal-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #7599c4;
+  transform: scaleX(var(--reveal, 1));
+  transform-origin: right;
+  z-index: 999;
+}
 
 .glass-card-caption {
   margin: 4px 0px 0px 0px;
@@ -238,6 +258,7 @@ body {
   font-weight: 900;
   font-style: italic;
 }
+
 
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);

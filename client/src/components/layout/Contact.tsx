@@ -32,7 +32,7 @@ const Contact = () => {
 
   return (
     <>
-      <section className="relative grid xl:grid-cols-2 min-h-screen xl:content-center">
+      <section className="relative grid xl:grid-cols-2 my-50 min-h-screen xl:content-center">
         <div
           data-label-text
           className="flex flex-col order-1 xl:order-0 max-xl:px-2 h-full max-xl:gap-8 gap-10 w-full justify-center items-center"
@@ -150,7 +150,11 @@ const Contact = () => {
                 ></circle>
               </g>
             </svg>
-            <a href="https://www.instagram.com/sibly.makes/" target="_blank">
+            <a
+              href="https://www.instagram.com/sibly.makes/"
+              target="_blank"
+              className="pointer-events-auto"
+            >
               <p className="over-the-rainbow-regular text-[clamp(1.875rem,1.2614rem+2.7273vw,5.625rem)] underline text-white">
                 @SiblyMakes
               </p>

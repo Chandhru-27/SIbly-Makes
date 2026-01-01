@@ -40,15 +40,15 @@ const Collections = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     const section = document.querySelector(
-      "[data-label-horizontalSection]"
+      "[data-label-horizontalsection]"
     ) as HTMLElement;
 
     const pin = document.querySelector(
-      "[data-label-horizontalPin]"
+      "[data-label-horizontalpin]"
     ) as HTMLElement;
 
     const track = document.querySelector(
-      "[data-label-horizontalTrack]"
+      "[data-label-horizontaltrack]"
     ) as HTMLElement;
 
     const totalScroll = track.scrollWidth - window.innerWidth;
@@ -141,13 +141,13 @@ const Collections = () => {
       </div>
 
       {/* Horizontal Scroll Desktop */}
-      <div data-label-horizontalSection className="lg:block hidden">
+      <div data-label-horizontalsection className="lg:block hidden">
         <div
-          data-label-horizontalPin
+          data-label-horizontalpin
           className="overflow-hidden flex pointer-events-auto"
         >
           <div
-            data-label-horizontalTrack
+            data-label-horizontaltrack
             className="flex w-max gap-10 pl-[20vw] pr-[10vw] pt-[10vh] relative"
           >
             {/* Image */}
@@ -164,14 +164,14 @@ const Collections = () => {
 
                   {/* Top Number */}
                   <div className="absolute top-6 left-6">
-                    <p className="text-[64px] md:text-[80px] poppins-extrabold   text-pink-400 leading-none">
+                    <p className="text-[64px] md:text-[80px] poppins-extrabold text-pink-500 leading-none">
                       {items.imageCount}
                     </p>
                   </div>
 
                   {/* Bottom Caption */}
                   <div className="absolute bottom-6 left-6">
-                    <p className="text-white text-[24px] md:text-[32px] poppins-extrabold  tracking-tight uppercase">
+                    <p className="text-white text-[24px] md:text-[32px] poppins-extrabold tracking-wider uppercase">
                       {items.imageCaption}
                     </p>
                   </div>
@@ -197,14 +197,14 @@ const Collections = () => {
 
                 {/* Top Count */}
                 <div className="absolute top-4 left-4">
-                  <p className="text-[42px] font-extrabold text-[#3377c9] leading-none">
+                  <p className="text-[42px] font-extrabold text-pink-500 leading-none">
                     {items.imageCount}
                   </p>
                 </div>
 
                 {/* Bottom Caption */}
                 <div className="absolute bottom-4 left-4">
-                  <p className="text-pink-400 text-[18px] poppins-extrabold underline tracking-tight uppercase">
+                  <p className="text-white text-[22px] poppins-extrabold tracking-wider uppercase">
                     {items.imageCaption}
                   </p>
                 </div>

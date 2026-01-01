@@ -20,11 +20,11 @@ const App = () => {
           <div style={{ width: "100%", height: "100%", position: "absolute" }}>
             <Particles
               particleColors={["#ffffff", "#7599C4", "#b30b86"]}
-              particleCount={viewPortHeight * 15}
+              particleCount={viewPortHeight * 25}
               particleSpread={10}
               speed={0.05}
               particleBaseSize={115}
-              moveParticlesOnHover={true}
+              moveParticlesOnHover={false}
               alphaParticles={false}
               sizeRandomness={1}
               disableRotation={false}
@@ -37,10 +37,10 @@ const App = () => {
             className="min-h-screen flex flex-col gap-[5vh]"
           >
             <Decorations />
-            <div className="flex flex-col 2xl:mt-15">
+            <div className="2xl:mt-15">
               <HeaderContent />
             </div>
-            <div>
+            <div className="xl:mt-15 2xl:mt-25">
               <HeroContent />
             </div>
           </div>

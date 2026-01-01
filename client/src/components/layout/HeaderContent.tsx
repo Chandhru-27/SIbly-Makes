@@ -1,8 +1,8 @@
 import { Menu } from "lucide-react";
 import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
-
+import { useRef, useState } from "react";
+import Sidebar from "../ui/Sidebar";
 
 const HeaderContent = () => {
   const viewPortWidth = window.innerWidth;
@@ -17,6 +17,13 @@ const HeaderContent = () => {
   } else if (viewPortWidth > 1920) {
     size = 38;
   }
+
+  const navLinks = [
+    { linkName: "Home", linkTo: "#home", linkNumber: "01" },
+    { linkName: "Editorial", linkTo: "#editorial", linkNumber: "02" },
+    { linkName: "Collections", linkTo: "#collections", linkNumber: "03" },
+    { linkName: "Contact Us", linkTo: "#contact", linkNumber: "04" },
+  ];
 
   const navRef = useRef(null);
   useGSAP(
@@ -42,14 +49,15 @@ const HeaderContent = () => {
     { scope: navRef }
   );
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <header className="w-full flex">
+    <header className="w-full flex z-999 fixed">
       <nav
         ref={navRef}
-        className="text-white opacity-70 nav-elements px-[clamp(1.875rem,0.75rem+5vw,8.75rem)] flex gap-20 w-full  justify-between items-center"
+        className="text-[#cacaca] nav-elements px-[clamp(1.875rem,0.25rem+3vw,8.75rem)] flex gap-20 w-full justify-between items-center"
       >
-        <a
-          href="#home"
+        <div
           className="biz-udmincho-regular nav-elements text-[clamp(1.3375rem,0.5284rem+1.8182vw,3.4375rem)] flex xl:gap-10 gap-6  items-center cursor-pointer"
         >
           <div data-logo-residence>
@@ -60,41 +68,26 @@ const HeaderContent = () => {
             />
           </div>
           <span className="leading-tight">
-            <span className="tracking-wide glow-text">Sibly</span>{" "}
+            <span className="tracking-wide ">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>
           </span>
-        </a>
-        <div className="lg:space-x-15 mt-2 2xl:space-x-35 text-[clamp(0.625rem,0.4716rem+0.6818vw,1.5625rem)] poppins-regular4">
-          <>
-            <button className="hambutton">
-              <Menu color="#ffffff" size={size} strokeWidth={4} />
-            </button>
-          </>
-
-          {/* <>
-            <a
-              href="#home"
-              rel="nopener noreference"
-              className="cursor-pointer pointer-events-auto hidden lg:inline poiret-one-regular"
-            >
-              <span className="tracking-[2px]">Home</span> ❋
-            </a>
-            <a
-              href="#collections"
-              className="cursor-pointer pointer-events-auto hidden lg:inline poiret-one-regular"
-            >
-              <span className="tracking-[2px]">Collections</span> ❋
-            </a>
-            <a
-              href="#contact"
-              rel="nopener noreference"
-              className="cursor-pointer pointer-events-auto hidden lg:inline poiret-one-regular"
-            >
-              <span className="tracking-[2px]">Contact us</span> ❋
-            </a>
-          </> */}
+        </div>
+        <div className="flex mt-2">
+          <button
+            className="hambutton mx-auto pointer-events-auto cursor-pointer"
+            onClick={() => {
+              setOpen(true);
+            }}
+          >
+            <Menu color="#ffffff" size={size} strokeWidth={4} />
+          </button>
         </div>
       </nav>
+      {open && (
+        <div className="fixed top-0 right-0 h-screen z-9999 overflow-hidden">
+          <Sidebar navLinks={navLinks} open={open} setOpen={setOpen} />
+        </div>
+      )}
     </header>
   );
 };

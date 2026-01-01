@@ -37,19 +37,24 @@ const Contact = () => {
           data-label-text
           className="flex flex-col order-1 xl:order-0 max-xl:px-2 h-full max-xl:gap-8 gap-10 w-full justify-center items-center"
         >
-            <p className="xl:w-1/2 leading-none tracking-lighter flex flex-col max-xl:items-center max-xl:gap-2 gap-4 text-white text-[clamp(1.3625rem,1.2398rem+4.3455vw,8.8125rem)]  poppins-bold">
-              <div className="flex xl:flex-col gap-2">
-                <span className="xl:w-full xl:text-left">LET'S</span>
-                <span className="xk:biz-udmincho-regular xl:w-full xl:pr-18 xl:text-center tracking-tight text-[#7599C4]">
-                  GET IN
-                </span>
-                <span className="xl:w-full xl:text-end">TOUCH</span>
-              </div>
-              <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poiret-one-regular">
-                You’re just one step away from turning your idea into a custom
-                crochet piece or letter script.
-              </p>
+          <div className="xl:w-1/2 leading-none tracking-lighter flex flex-col max-xl:items-center max-xl:gap-2 gap-4 text-white text-[clamp(1.3625rem,1.2398rem+4.3455vw,8.8125rem)] poppins-bold">
+            {/* Heading */}
+            <div className="flex xl:flex-col gap-2">
+              <span className="xl:w-full xl:text-left">LET&apos;S</span>
+
+              <span className="xl:biz-udmincho-regular poppins-bold xl:w-full xl:pr-18 xl:text-center tracking-tight text-[#7599C4]">
+                <span>GET IN</span>
+              </span>
+
+              <span className="xl:w-full xl:text-end">TOUCH</span>
+            </div>
+
+            {/* Sub text */}
+            <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poiret-one-regular">
+              You’re just one step away from turning your idea into a custom
+              crochet piece or letter script.
             </p>
+          </div>
           <div className="flex items-center gap-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -128,10 +133,10 @@ const Contact = () => {
                 <path
                   fill="none"
                   stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
                   d="M30,11H18c-3.9,0-7,3.1-7,7v12c0,3.9,3.1,7,7,7h12c3.9,0,7-3.1,7-7V18C37,14.1,33.9,11,30,11z"
                 ></path>
                 <circle cx="31" cy="16" r="1" fill="#fff"></circle>
@@ -143,10 +148,10 @@ const Contact = () => {
                   r="6"
                   fill="none"
                   stroke="#fff"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-miterlimit="10"
-                  stroke-width="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeMiterlimit="10"
+                  strokeWidth="2"
                 ></circle>
               </g>
             </svg>

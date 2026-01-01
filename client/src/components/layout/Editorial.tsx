@@ -143,7 +143,7 @@ const Editorial = () => {
   return (
     <section
       ref={sectionRef}
-      className="min-h-screen relative text-white w-full z-99 px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]"
+      className="min-h-screen relative text-white w-full  px-[clamp(1.875rem,0.75rem+5vw,8.75rem)]"
     >
       <div className="flex flex-col items-center gap-[clamp(2.5rem,1.6818rem+3.6364vw,7.5rem)]">
         {/* Logo Holder */}

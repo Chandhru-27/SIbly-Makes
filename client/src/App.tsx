@@ -10,7 +10,6 @@ import Particles from "./components/Particles";
 import Footer from "./components/layout/Footer";
 import HeaderContent from "./components/layout/HeaderContent";
 
-
 const App = () => {
   const viewPortHeight = window.innerHeight;
 
@@ -31,43 +30,14 @@ const App = () => {
               disableRotation={false}
             />
           </div>
-
-          {/* <StaggeredMenu
-            isOpen={isSidebarOpen}
-            onMenuOpen={() => setIsSidebarOpen(true)}
-            onMenuClose={() => setIsSidebarOpen(false)}
-            items={[
-              { label: "Home", ariaLabel: "Navigate to home", link: "#home" },
-              {
-                label: "Editorial",
-                ariaLabel: "Navigate to editorial",
-                link: "#editorial",
-              },
-              {
-                label: "Collections",
-                ariaLabel: "Navigate to collections",
-                link: "#collections",
-              },
-              {
-                label: "Contact",
-                ariaLabel: "Navigate to contact",
-                link: "#contact",
-              },
-            ]}
-            position="right"
-            colors={["#ffffff", "#7599C4"]}
-            accentColor="#7599C4"
-            logoUrl="/assets/logo.webp"
-            isFixed={true}
-          /> */}
-
+          
           {/* Landing Page */}
           <div
             id="home"
-            className="relative min-h-screen flex flex-col gap-[5vh]"
+            className="min-h-screen flex flex-col gap-[5vh]"
           >
             <Decorations />
-            <div className="flex flex-col  2xl:mt-15">
+            <div className="flex flex-col 2xl:mt-15">
               <HeaderContent />
             </div>
             <div>

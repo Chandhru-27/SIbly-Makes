@@ -4,6 +4,39 @@ import { useRef } from "react";
 import SplitType from "split-type";
 
 const Collections = () => {
+  const collectionFactory = [
+    {
+      imageURL: "/assets/collections/carrybag.webp",
+      imageCount: "01",
+      imageCaption: "Crochet Bag",
+    },
+    {
+      imageURL: "/assets/collections/bowchains.webp",
+      imageCount: "02",
+      imageCaption: "Bow Keychains",
+    },
+    {
+      imageURL: "/assets/collections/tabledecorations.webp",
+      imageCount: "03",
+      imageCaption: "Crochet Pets",
+    },
+    {
+      imageURL: "/assets/collections/petchains.webp",
+      imageCount: "04",
+      imageCaption: "Pet Keychains",
+    },
+    {
+      imageURL: "/assets/collections/beanie.webp",
+      imageCount: "05",
+      imageCaption: "Crochet Beanie",
+    },
+    {
+      imageURL: "/assets/collections/Keychains.webp",
+      imageCount: "06",
+      imageCaption: "Custom Keychains",
+    },
+  ];
+
   const containerRef = useRef<HTMLDivElement>(null);
   useGSAP(() => {
     const section = document.querySelector(
@@ -109,50 +142,42 @@ const Collections = () => {
 
       {/* Horizontal Scroll Desktop */}
       <div data-label-horizontalSection className="lg:block hidden">
-        <div data-label-horizontalPin className="overflow-hidden flex">
+        <div
+          data-label-horizontalPin
+          className="overflow-hidden flex pointer-events-auto"
+        >
           <div
             data-label-horizontalTrack
             className="flex w-max gap-10 pl-[20vw] pr-[10vw] pt-[10vh] relative"
           >
-            <div data-label-panel className="glass-card">
-              {/* Image */}
-              <div className="w-[90%] h-[90%] mt-5 overflow-hidden">
-                <img
-                  src="/assets/collections/Keychains.webp"
-                  className="gorw h-full w-full"
-                />
-              </div>
-            </div>
+            {/* Image */}
 
-            <div data-label-panel className="glass-card">
-              {/* Image */}
-              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
-                <img
-                  src="/assets/collections/Keychains.webp"
-                  className="gorw h-full w-full"
-                />
-              </div>
-            </div>
+            {collectionFactory.map((items, index) => (
+              <div key={index} data-label-panel className="glass-card">
+                <div className="relative w-[90%] h-[90%] mt-5 overflow-hidden">
+                  {/* Image */}
+                  <img
+                    src={items.imageURL}
+                    alt={items.imageCaption}
+                    className="h-full w-full object-cover opacity-70 hover:opacity-100 transition-all duration-300 ease-in-out hover:scale-105"
+                  />
 
-            <div data-label-panel className="glass-card">
-              {/* Image */}
-              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
-                <img
-                  src="/assets/collections/Keychains.webp"
-                  className="gorw h-full w-full"
-                />
-              </div>
-            </div>
+                  {/* Top Number */}
+                  <div className="absolute top-6 left-6">
+                    <p className="text-[64px] md:text-[80px] poppins-extrabold   text-pink-400 leading-none">
+                      {items.imageCount}
+                    </p>
+                  </div>
 
-            <div data-label-panel className="glass-card">
-              {/* Image */}
-              <div className="w-[90%] h-[90%] mt-5 relative overflow-hidden">
-                <img
-                  src="/assets/collections/Keychains.webp"
-                  className="gorw h-full w-full"
-                />
+                  {/* Bottom Caption */}
+                  <div className="absolute bottom-6 left-6">
+                    <p className="text-white text-[24px] md:text-[32px] poppins-extrabold  tracking-tight uppercase">
+                      {items.imageCaption}
+                    </p>
+                  </div>
+                </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
@@ -160,77 +185,72 @@ const Collections = () => {
       {/* Horizontal Scroll Mobile */}
       <div className="lg:hidden flex justify-center ">
         <div className="flex flex-col justify-center w-max gap-10 pt-[5vh]">
-          <div data-image-mobile className="glass-card-mobile">
-            <div className="w-[90%] h-[90%] flex justify-center my-4 relative overflow-hidden">
-              <img
-                src="/assets/collections/Keychains.webp"
-                className="gorw h-full w-full"
-              />
-            </div>
-          </div>
+          {collectionFactory.map((items, index) => (
+            <div key={index} data-image-mobile className="glass-card-mobile">
+              <div className="relative w-[90%] h-[90%] flex justify-center my-4 overflow-hidden">
+                {/* Image */}
+                <img
+                  src={items.imageURL}
+                  alt={items.imageCaption}
+                  className="h-full w-full object-cover opacity-90 transition-transform duration-300 ease-out"
+                />
 
-          <div className="glass-card-mobile">
-            <div
-              data-image-mobile
-              className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden"
-            >
-              <img
-                src="/assets/collections/Keychains.webp"
-                className="gorw h-full w-full"
-              />
-            </div>
-          </div>
+                {/* Top Count */}
+                <div className="absolute top-4 left-4">
+                  <p className="text-[42px] font-extrabold text-[#3377c9] leading-none">
+                    {items.imageCount}
+                  </p>
+                </div>
 
-          <div className="glass-card-mobile">
-            <div
-              data-image-mobile
-              className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden"
-            >
-              <img
-                src="/assets/collections/Keychains.webp"
-                className="gorw h-full w-full"
-              />
+                {/* Bottom Caption */}
+                <div className="absolute bottom-4 left-4">
+                  <p className="text-pink-400 text-[18px] poppins-extrabold underline tracking-tight uppercase">
+                    {items.imageCaption}
+                  </p>
+                </div>
+              </div>
             </div>
-          </div>
-
-          <div className="glass-card-mobile">
-            <div
-              data-image-mobile
-              className="w-[90%] h-[90%]flex justify-center my-4 relative overflow-hidden"
-            >
-              <img
-                src="/assets/collections/Keychains.webp"
-                className="gorw h-full w-full"
-              />
-            </div>
-          </div>
+          ))}
         </div>
       </div>
 
       {/* CTA section */}
       <div
         ref={containerRef}
-        className="flex justify-center py-5 max-xl:mt-30 lg:mt-25 mt-15"
+        className="flex justify-center xl:min-h-screen h-[40vh] items-center"
       >
-        <p className="text-[clamp(1.5625rem,0.5909rem+4.3182vw,7.5rem)] text-white text-center poppins-bold leading-none">
-          <p className="flex gap-2 justify-center">
-            <span className="biz-udmincho-regular text-[#7599C4] tracking-tighter">
+        <p
+          className="
+              poppins-bold
+              text-center
+              leading-[0.95]
+              text-white
+              max-w-[90vw]
+              xl:max-w-300
+              2xl:max-w-350
+              mx-auto
+              text-[clamp(1.375rem,0.5773rem+3.5455vw,6.25rem)]"
+        >
+          <span className="block whitespace-nowrap">
+            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
               DESIGNED
             </span>{" "}
-            TO BE PERSONAL,<br></br>
-          </p>
-          <p className="flex gap-2 justify-center">
-            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
+            TO BE PERSONAL,
+          </span>
+
+          <span className="block whitespace-nowrap">
+            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
               CRAFTED
             </span>{" "}
-            TO BE YOURS. LET'S <br></br>
-          </p>
-          <p className="flex gap-2 justify-center">
-            <span className="biz-udmincho-regular tracking-tighter text-[#7599C4]">
+            TO BE YOURS. LET’S
+          </span>
+
+          <span className="block whitespace-nowrap">
+            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
               CUSTOMIZE
-            </span>
-            <span>ONE JUST FOR YOU</span>
-          </p>
+            </span>{" "}
+            ONE JUST FOR YOU
+          </span>
         </p>
       </div>
 

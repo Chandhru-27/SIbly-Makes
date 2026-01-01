@@ -89,6 +89,7 @@ const Collections = () => {
           scrollTrigger: {
             trigger: containerRef.current,
             start: `top 100%`,
+            toggleActions: "play none none none"
           },
         }
       );
@@ -103,6 +104,7 @@ const Collections = () => {
       scrollTrigger: {
         trigger: containerRef.current,
         start: `top 90%`,
+        toggleActions: "play none none none"
       },
     });
 
@@ -215,12 +217,10 @@ const Collections = () => {
       </div>
 
       {/* CTA section */}
-      <div
-        ref={containerRef}
-        className="flex justify-center xl:min-h-screen h-[40vh] items-center"
-      >
-        <p
-          className="
+      <div className="flex 2xl:mt-40 lg:mt-10 xl:mt-20 flex-col 2xl:min-h-[60vh] xl:min-h-screen h-[60vh] items-center justify-center gap-30 xl:gap-30 2xl:gap-40">
+        <div ref={containerRef} className="flex justify-center items-center">
+          <p
+            className="
               poppins-bold
               text-center
               leading-[0.95]
@@ -230,39 +230,123 @@ const Collections = () => {
               2xl:max-w-350
               mx-auto
               text-[clamp(1.375rem,0.5773rem+3.5455vw,6.25rem)]"
-        >
-          <span className="block whitespace-nowrap">
-            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
-              DESIGNED
-            </span>{" "}
-            TO BE PERSONAL,
-          </span>
+          >
+            <span className="block whitespace-nowrap">
+              <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
+                DESIGNED
+              </span>{" "}
+              TO BE PERSONAL,
+            </span>
 
-          <span className="block whitespace-nowrap">
-            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
-              CRAFTED
-            </span>{" "}
-            TO BE YOURS. LET’S
-          </span>
+            <span className="block whitespace-nowrap">
+              <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
+                CRAFTED
+              </span>{" "}
+              TO BE YOURS. LET’S
+            </span>
 
-          <span className="block whitespace-nowrap">
-            <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
-              CUSTOMIZE
-            </span>{" "}
-            ONE JUST FOR YOU
-          </span>
-        </p>
-      </div>
+            <span className="block whitespace-nowrap">
+              <span className="biz-udmincho-regular text-[#7599C4] tracking-[-0.04em]">
+                CUSTOMIZE
+              </span>{" "}
+              ONE JUST FOR YOU
+            </span>
+          </p>
+        </div>
 
-      <div>
-        <div className="container">
-          {/* <p>🌸</p>
-          <p>🌸</p>
-          <p>🌸</p>
-          <p>🌸</p>
-          <p>🌸</p>
-          <p>🌸</p>
-          <p>🌸</p> */}
+        <div className="flex justify-center">
+          <div className="container">
+            <div className="group">
+              {/* Actual */}
+              <div className="card">
+                <img src="/assets/carousel/baby-hat-svgrepo-com.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/eraser.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pen.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pencil.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pin.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/sciscor.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/tailoringmachine.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/threadhook.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/yarn.svg" />
+              </div>
+
+              {/* Duplicate */}
+              <div className="card">
+                <img src="/assets/carousel/baby-hat-svgrepo-com.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/eraser.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pen.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pencil.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pin.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/sciscor.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/tailoringmachine.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/threadhook.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/yarn.svg" />
+              </div>
+
+              {/* Duplicate */}
+              <div className="card">
+                <img src="/assets/carousel/baby-hat-svgrepo-com.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/eraser.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pen.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pencil.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/pin.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/sciscor.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/tailoringmachine.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/threadhook.svg" />
+              </div>
+              <div className="card">
+                <img src="/assets/carousel/yarn.svg" />
+              </div>
+
+
+            </div>
+          </div>
         </div>
       </div>
     </section>

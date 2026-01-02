@@ -1,6 +1,7 @@
 import { X } from "lucide-react";
 import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";
+import { useRef } from "react";
 
 interface NavLinkProps {
   linkName: string;
@@ -15,8 +16,16 @@ interface SidebarProps {
 }
 
 const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
+  const containerRef = useRef<HTMLDivElement>(null);
+  const timelineRef = useRef<gsap.core.Timeline>(null);
+
   useGSAP(() => {
-    const tl = gsap.timeline();
+    const tl = gsap.timeline({
+      paused: true,
+      onReverseComplete: () => setOpen(false),
+    });
+
+    const button = document.querySelector(".close-button");
 
     gsap.set([".first-layer", ".second-layer", ".third-layer"], {
       xPercent: 100,
@@ -57,26 +66,29 @@ const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
         },
         "<0.045"
       );
+
+    tl.play();
+    timelineRef.current = tl;
   }, []);
 
   return (
-    <div data-label-sidebarcontainer>
+    <div ref={containerRef} data-label-sidebarcontainer>
       <div
         data-label-firstlevel
-        className="bg-blue-500 xl:w-140 2xl:w-[30vw] w-screen h-screen relative first-layer"
+        className="bg-blue-500 xl:w-140 2xl:w-260 w-screen h-screen relative first-layer"
       >
         <div
           data-label-secondlevel
-          className="bg-pink-300 xl:w-140 2xl:w-[30vw] w-screen h-screen absolute second-layer right-0"
+          className="bg-pink-300 xl:w-140 2xl:w-260 w-screen h-screen absolute second-layer right-0"
         >
           <div
             data-label-thirdlevel
-            className="bg-[#ffffffe5] xl:w-140 2xl:w-[30vw] w-screen h-screen absolute third-layer right-0"
+            className="bg-[#ffffffe5] xl:w-140 2xl:w-260 w-screen h-screen absolute third-layer right-0"
           >
             <div className="p-4">
               <button
-                className="pointer-events-auto cursor-pointer"
-                onClick={() => setOpen(false)}
+                className="pointer-events-auto cursor-pointer close-button hover:text-[#1c5eaf] transition-all ease-in-out duration-200"
+                onClick={() => timelineRef.current?.timeScale(2).reverse()}
               >
                 <X size={40} strokeWidth={2} />
               </button>
@@ -90,10 +102,11 @@ const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
                   key={index}
                   className="nav-item inline-block overflow-hidden uppercase tracking-tight leading-none perspective-midrange"
                 >
-                  <span className="nav-text xl:text-[65px] text-[40px] poppins-medium inline-block origin-bottom">
+                  <span className="nav-text text-[clamp(2.375rem,1.8432rem+2.3636vw,5.625rem)] poppins-medium inline-block origin-bottom">
                     <a
                       href={items.linkTo}
-                      className="pointer-events-auto flex gap-1 cursor-pointer" onClick={() => setOpen(false)}
+                      className="pointer-events-auto hover:text-[#3d73b6] transition-all ease-in-out duration-200 flex gap-1 cursor-pointer"
+                      onClick={() => timelineRef.current?.timeScale(2).reverse()}
                     >
                       {items.linkName}
                       <span className="nav-number text-[0.75rem] text-blue-700 underline">

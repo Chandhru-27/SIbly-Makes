@@ -25,8 +25,6 @@ const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
       onReverseComplete: () => setOpen(false),
     });
 
-    const button = document.querySelector(".close-button");
-
     gsap.set([".first-layer", ".second-layer", ".third-layer"], {
       xPercent: 100,
     });

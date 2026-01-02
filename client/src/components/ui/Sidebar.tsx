@@ -1,4 +1,3 @@
-import React from "react";
 import { X } from "lucide-react";
 import { gsap } from "../../lib/gsap";
 import { useGSAP } from "@gsap/react";

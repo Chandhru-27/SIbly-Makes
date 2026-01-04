@@ -9,9 +9,9 @@ const HeaderContent = () => {
   let size: number = 28;
 
   if (viewPortWidth <= 380) {
-    size = 18;
+    size = 16;
   } else if (viewPortWidth > 380 && viewPortWidth < 768) {
-    size = 22;
+    size = 20;
   } else if (viewPortWidth > 768 && viewPortWidth <= 1920) {
     size = 28;
   } else if (viewPortWidth > 1920) {
@@ -55,31 +55,31 @@ const HeaderContent = () => {
     <header className="w-full flex z-999 fixed">
       <nav
         ref={navRef}
-        className="text-[#cacaca] nav-elements px-[clamp(1.875rem,0.25rem+3vw,8.75rem)] flex gap-20 w-full justify-between items-center"
+        className="text-[#faf7f7] nav-elements flex gap-20 w-full justify-between items-center"
       >
         <div
-          className="biz-udmincho-regular nav-elements text-[clamp(1.3375rem,0.5284rem+1.8182vw,3.4375rem)] flex xl:gap-10 gap-6  items-center cursor-pointer"
+          className="biz-udmincho-regular nav-elements text-[clamp(1.1375rem,0.1584rem+1.6182vw,3.2375rem)] pl-[clamp(0.675rem,0.25rem+3vw,8.75rem)] flex xl:gap-6 gap-3 items-center  cursor-pointer"
         >
           <div data-logo-residence>
             <img
               src="/assets/logo.webp"
               data-logo-source
-              className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] logo h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] mt-1"
+              className="w-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)] logo h-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)] mt-1"
             />
           </div>
-          <span className="leading-tight">
+          <span className="leading-tight z-99 mt-1">
             <span className="tracking-wide ">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>
           </span>
         </div>
-        <div className="flex mt-2">
+        <div className="flex mt-2 pr-[clamp(1.275rem,0.25rem+3vw,8.75rem)]">
           <button
             className="hambutton mx-auto pointer-events-auto cursor-pointer"
             onClick={() => {
               setOpen(true);
             }}
           >
-            <Menu color="#ffffff" size={size} strokeWidth={4} />
+            <Menu color="#ffffff" size={size} strokeWidth={2} />
           </button>
         </div>
       </nav>

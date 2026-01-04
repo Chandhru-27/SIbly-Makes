@@ -154,7 +154,7 @@ const Editorial = () => {
             </p>
             <div
               data-logo-target
-              className="w-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)] h-[clamp(2rem,1.5909rem+1.8182vw,4.5rem)]"
+              className="w-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)]  h-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)] "
             ></div>
             <p className="text-[clamp(2rem,1.6932rem+1.3636vw,3.875rem)] text-[#cdcdcd]">
               )
@@ -229,7 +229,7 @@ const Editorial = () => {
               </div>
             </div>
 
-            <div data-why-right className="lg:w-2/4 w-full">
+            <div data-why-right className="lg:w-2/4 w-full leading-tight">
               <div
                 data-why-container
                 className="relative h-screen overflow-hidden"
@@ -242,7 +242,7 @@ const Editorial = () => {
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       HANDWRITTEN, NEVER GENERATED ✍🏻
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       Every letter we create is written by hand using
                       traditional calligraphy techniques — no fonts, no
                       shortcuts. Each piece carries the warmth, imperfections,
@@ -259,7 +259,7 @@ const Editorial = () => {
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       CRAFTED WITH CARE 🪡
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       From delicate crochet details to fully custom designs,
                       every creation is made patiently, one loop at a time. We
                       believe true craftsmanship takes time, intention, and care
@@ -274,9 +274,9 @@ const Editorial = () => {
                 >
                   <div className="flex flex-col gap-5 justify-center">
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
-                      END TO END SUPPORT 🫱🏻‍🫲🏻
+                      END TO END SUPPORT 📨
                     </p>
-                    <p className="biz-udmincho-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-tight">
+                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       Your ideas guide the process. We work closely with you to
                       customise each piece to your vision, provide clear
                       communication throughout, and ensure safe, hassle-free
@@ -305,13 +305,13 @@ const Editorial = () => {
             </div>
           </div>
 
-          <div className="h-full overflow-hidden space-y-20">
+          <div className="h-full overflow-hidden space-y-20 leading-tight">
             <div data-why-item-mobile className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   HANDWRITTEN, NEVER GENERATED ✍🏻
                 </p>
-                <p className="biz-udmincho-regular text-[18px] tracking-tight">
+                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
                   Every letter we create is written by hand using traditional
                   calligraphy techniques — no fonts, no shortcuts. Each piece
                   carries the warmth, imperfections, and character that only
@@ -324,7 +324,7 @@ const Editorial = () => {
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   CRAFTED WITH CARE 🪡
                 </p>
-                <p className="biz-udmincho-regular text-[18px] tracking-tight">
+                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
                   From delicate crochet details to fully custom designs, every
                   creation is made patiently, one loop at a time. We believe
                   true craftsmanship takes time, intention, and care — and
@@ -335,9 +335,9 @@ const Editorial = () => {
             <div data-why-item-mobile className=" flex justify-center">
               <div className="flex flex-col gap-5 justify-center">
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
-                  END TO END SUPPORT 🫱🏻‍🫲🏻
+                  END TO END SUPPORT 📨
                 </p>
-                <p className="biz-udmincho-regular text-[18px] tracking-tight">
+                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
                   Your ideas guide the process. We work closely with you to
                   customise each piece to your vision, provide clear
                   communication throughout, and ensure safe, hassle-free

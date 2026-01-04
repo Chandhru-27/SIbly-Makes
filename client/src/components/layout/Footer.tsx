@@ -1,4 +1,9 @@
-const navLinks = ["Home", "Collections", "Contact"];
+const navLinks = [
+  { linkName: "Home", link: "#home" },
+  { linkName: "Editorial", link: "#editorial" },
+  { linkName: "Collections", link: "#collections" },
+  { linkName: "Contact", link: "#contact" },
+];
 
 const credits = [
   {
@@ -39,9 +44,9 @@ const Footer = () => {
 
           <div className="space-y-8 poiret-one-regular text-[14px] xs:text-[18px] 2xl:text-[28px] pointer-events-auto">
             <div className="space-y-2 max-lg:text-center">
-              {navLinks.map((item) => (
-                <p key={item} className="cursor-pointer hover:underline">
-                  <a rel="noopener noreferrer">{item}</a>
+              {navLinks.map((item, index) => (
+                <p key={index} className="cursor-pointer hover:underline">
+                  <a href={item.link} rel="noopener noreferrer">{item.linkName}</a>
                 </p>
               ))}
             </div>

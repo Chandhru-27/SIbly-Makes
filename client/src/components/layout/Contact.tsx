@@ -50,7 +50,7 @@ const Contact = () => {
             </div>
 
             {/* Sub text */}
-            <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poiret-one-regular">
+            <p className="text-white tracking-tight mt-5 text-center text-[clamp(0.9375rem,0.6818rem+1.1364vw,2.5rem)] poppins-regular">
               You’re just one step away from turning your idea into a custom
               crochet piece or letter script.
             </p>

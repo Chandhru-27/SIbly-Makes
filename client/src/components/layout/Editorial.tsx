@@ -242,7 +242,7 @@ const Editorial = () => {
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       HANDWRITTEN, NEVER GENERATED ✍🏻
                     </p>
-                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
+                    <p className="poppins-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       Every letter we create is written by hand using
                       traditional calligraphy techniques — no fonts, no
                       shortcuts. Each piece carries the warmth, imperfections,
@@ -259,7 +259,7 @@ const Editorial = () => {
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       CRAFTED WITH CARE 🪡
                     </p>
-                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
+                    <p className="poppins-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       From delicate crochet details to fully custom designs,
                       every creation is made patiently, one loop at a time. We
                       believe true craftsmanship takes time, intention, and care
@@ -276,7 +276,7 @@ const Editorial = () => {
                     <p className="poppins-semibold text-[#7599C4] text-[clamp(2rem,0.9333rem+1.0417vw,3rem)]">
                       END TO END SUPPORT 📨
                     </p>
-                    <p className="over-the-rainbow-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
+                    <p className="poppins-regular text-[clamp(1.5rem,0.6167rem+0.9115vw,2.375rem)] tracking-wide">
                       Your ideas guide the process. We work closely with you to
                       customise each piece to your vision, provide clear
                       communication throughout, and ensure safe, hassle-free

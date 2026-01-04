@@ -311,7 +311,7 @@ const Editorial = () => {
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   HANDWRITTEN, NEVER GENERATED ✍🏻
                 </p>
-                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
+                <p className="poppins-medium text-[18px] tracking-wide">
                   Every letter we create is written by hand using traditional
                   calligraphy techniques — no fonts, no shortcuts. Each piece
                   carries the warmth, imperfections, and character that only
@@ -324,7 +324,7 @@ const Editorial = () => {
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   CRAFTED WITH CARE 🪡
                 </p>
-                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
+                <p className="poppins-medium text-[18px] tracking-wide">
                   From delicate crochet details to fully custom designs, every
                   creation is made patiently, one loop at a time. We believe
                   true craftsmanship takes time, intention, and care — and
@@ -337,7 +337,7 @@ const Editorial = () => {
                 <p className="poppins-semibold text-[#7599C4] text-[28px]">
                   END TO END SUPPORT 📨
                 </p>
-                <p className="over-the-rainbow-regular text-[18px] tracking-wide">
+                <p className="poppins-medium text-[18px] tracking-wide">
                   Your ideas guide the process. We work closely with you to
                   customise each piece to your vision, provide clear
                   communication throughout, and ensure safe, hassle-free

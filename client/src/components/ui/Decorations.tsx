@@ -1,11 +1,6 @@
 const Decorations = () => {
   return (
     <div>
-      {/* <div className="absolute inset-y-0 z-50 left-0 max-h-full flex flex-col justify-between pt-[clamp(5.3125rem,4.8077rem+2.2436vw,7.5rem)] pl-5 ">
-        <div className="hero-animate w-1 h-20 opacity-50 fill-current bg-white/70 rounded-2xl"></div>
-        <div className="hero-animate w-1 h-20 opacity-50 fill-current bg-white/70 rounded-2xl"></div>
-      </div> */}
-
       <div>
         <img
           src="/assets/leaf.webp"

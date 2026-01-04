@@ -73,15 +73,15 @@ const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
     <div ref={containerRef} data-label-sidebarcontainer>
       <div
         data-label-firstlevel
-        className="bg-blue-500 xl:w-140 2xl:w-260 w-screen h-screen relative first-layer"
+        className="bg-blue-500 xl:w-[clamp(35rem,5rem+37.5vw,65rem)] w-screen h-screen relative first-layer"
       >
         <div
           data-label-secondlevel
-          className="bg-pink-300 xl:w-140 2xl:w-260 w-screen h-screen absolute second-layer right-0"
+          className="bg-pink-300 xl:w-[clamp(35rem,5rem+37.5vw,65rem)] w-screen h-screen absolute second-layer right-0"
         >
           <div
             data-label-thirdlevel
-            className="bg-[#ffffffe5] xl:w-140 2xl:w-260 w-screen h-screen absolute third-layer right-0"
+            className="bg-[#ffffffe5] xl:w-[clamp(35rem,5rem+37.5vw,65rem)] w-screen h-screen absolute third-layer right-0"
           >
             <div className="p-4">
               <button
@@ -93,7 +93,7 @@ const Sidebar = ({ navLinks, setOpen }: SidebarProps) => {
             </div>
             <div
               data-label-linkcontainer
-              className="h-[50%] px-[2em] flex flex-col gap-4 pt-20 2xl:pt-40"
+              className="px-[2em] flex flex-col gap-4 pt-[clamp(5rem,4.1818rem+3.6364vw,10rem)]"
             >
               {navLinks.map((items, index) => (
                 <span

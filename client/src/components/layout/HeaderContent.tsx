@@ -52,7 +52,7 @@ const HeaderContent = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <header className="w-full flex z-999 fixed">
+    <header className="w-full flex fixed">
       <nav
         ref={navRef}
         className="text-[#faf7f7] nav-elements flex gap-20 w-full justify-between items-center"
@@ -67,7 +67,7 @@ const HeaderContent = () => {
               className="w-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)] logo h-[clamp(1rem,1.0909rem+1.4182vw,4.5rem)] mt-1"
             />
           </div>
-          <span className="leading-tight z-99 mt-1">
+          <span className="leading-tight mt-1">
             <span className="tracking-wide ">Sibly</span>{" "}
             <span className="text-[#7599C4] tracking-wider">Makes</span>
           </span>

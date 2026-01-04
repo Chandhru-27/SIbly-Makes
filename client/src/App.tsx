@@ -39,13 +39,14 @@ const App = () => {
               />
             </div>
 
+            <Decorations /> 
+
             {/* Landing Page */}
-            <div id="home" className="min-h-screen flex flex-col gap-[5vh]">
-              <Decorations />
-              <div className="2xl:mt-15">
+            <div id="home" className="min-h-dvh flex flex-col gap-[clamp(1.25rem,-0.1818rem+6.3636vw,10rem)]">
+              <div className="mt-[clamp(2.5rem,-1.25rem+4.6875vw,6.25rem)] z-9999">
                 <HeaderContent />
               </div>
-              <div className="xl:mt-15 2xl:mt-25">
+              <div>
                 <HeroContent />
               </div>
             </div>

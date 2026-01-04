@@ -9,63 +9,69 @@ import Contact from "./components/layout/Contact";
 import Particles from "./components/Particles";
 import Footer from "./components/layout/Footer";
 import HeaderContent from "./components/layout/HeaderContent";
+import Loading from "./components/ui/Loading";
+import { useLoadingStore } from "./store/useLoadingStore";
 
 const App = () => {
+  const isLoaded = useLoadingStore((set) => set.isLoaded);
   const viewPortHeight = window.innerHeight;
 
   return (
     <LenisProvider>
       <BrowserRouter>
-        <main className="hero relative w-full min-h-screen max-w-640 mx-auto z-10">
-          <div style={{ width: "100%", height: "100%", position: "absolute" }}>
-            <Particles
-              particleColors={["#ffffff", "#7599C4", "#b30b86"]}
-              particleCount={viewPortHeight * 25}
-              particleSpread={10}
-              speed={0.05}
-              particleBaseSize={115}
-              moveParticlesOnHover={false}
-              alphaParticles={false}
-              sizeRandomness={1}
-              disableRotation={false}
-            />
-          </div>
-          
-          {/* Landing Page */}
-          <div
-            id="home"
-            className="min-h-screen flex flex-col gap-[5vh]"
-          >
-            <Decorations />
-            <div className="2xl:mt-15">
-              <HeaderContent />
+        {!isLoaded ? (
+          <Loading className="loading-screen" />
+        ) : (
+          <main className="hero relative w-full min-h-screen max-w-640 mx-auto z-10">
+            <div
+              style={{ width: "100%", height: "100%", position: "absolute" }}
+            >
+              <Particles
+                particleColors={["#ffffff", "#7599C4", "#b30b86"]}
+                particleCount={viewPortHeight * 25}
+                particleSpread={10}
+                speed={0.05}
+                particleBaseSize={115}
+                moveParticlesOnHover={false}
+                alphaParticles={false}
+                sizeRandomness={1}
+                disableRotation={false}
+              />
             </div>
-            <div className="xl:mt-15 2xl:mt-25">
-              <HeroContent />
+
+            {/* Landing Page */}
+            <div id="home" className="min-h-screen flex flex-col gap-[5vh]">
+              <Decorations />
+              <div className="2xl:mt-15">
+                <HeaderContent />
+              </div>
+              <div className="xl:mt-15 2xl:mt-25">
+                <HeroContent />
+              </div>
             </div>
-          </div>
 
-          {/* Editorial Section */}
-          <div id="editorial" className="mt-40 max-w-640 mx-auto">
-            <Editorial />
-            {SharedLogoAnimator()}
-          </div>
+            {/* Editorial Section */}
+            <div id="editorial" className="mt-40 max-w-640 mx-auto">
+              <Editorial />
+              <SharedLogoAnimator />
+            </div>
 
-          {/* Collection Section */}
-          <div id="collections" className="mt-20 max-w-640 mx-auto">
-            <Collections />
-          </div>
+            {/* Collection Section */}
+            <div id="collections" className="mt-20 max-w-640 mx-auto">
+              <Collections />
+            </div>
 
-          {/* Contact Section */}
-          <div id="contact" className="mt-20">
-            <Contact />
-          </div>
+            {/* Contact Section */}
+            <div id="contact" className="mt-20">
+              <Contact />
+            </div>
 
-          {/* Footer section */}
-          <div className="mt-20">
-            <Footer />
-          </div>
-        </main>
+            {/* Footer section */}
+            <div className="mt-20">
+              <Footer />
+            </div>
+          </main>
+        )}
       </BrowserRouter>
     </LenisProvider>
   );
